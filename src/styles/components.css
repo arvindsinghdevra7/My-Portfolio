@@ -2501,6 +2501,15 @@
   gap: 0.5rem;
 }
 
+/* ── Desktop & Mobile Showcases ── */
+.skills-desktop-marquee {
+  display: flex;
+}
+
+.skills-mobile-deck {
+  display: none;
+}
+
 /* ── Dual-Row Right-to-Left Infinite Marquee ── */
 .skills-dual-marquee-container {
   display: flex;
@@ -2759,8 +2768,15 @@
 
 /* Responsive */
 @media (max-width: 992px) {
+  .skills-luxury-section {
+    padding: 5rem 0 6rem;
+  }
   .skills-luxury-title {
     font-size: 2.8rem;
+  }
+  .skills-bento-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.2rem;
   }
   .highlight-divider {
     display: none;
@@ -2768,21 +2784,203 @@
   .skills-highlights-bar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 2rem 2.2rem;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .skills-luxury-section {
+    padding: 3.8rem 0 4.2rem;
+  }
+  .skills-luxury-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .skills-luxury-header {
+    margin-bottom: 1.6rem;
+  }
+  .skills-tag-pill {
+    font-size: 0.74rem;
+    padding: 0.32rem 0.95rem;
+    margin-bottom: 0.75rem;
+  }
   .skills-luxury-title {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 7.5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+  }
+  .skills-luxury-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    padding: 0 0.5rem;
+    margin-bottom: 1.3rem;
+  }
+  .framer-marquee-wrapper {
+    margin-bottom: 1.4rem;
+  }
+  .framer-marquee-pill {
+    font-size: 0.76rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  /* Horizontal swipeable category rail */
+  .skills-tabs-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.2rem 0.2rem 0.5rem;
+    justify-content: flex-start;
+  }
+  .skills-tabs-container::-webkit-scrollbar {
+    display: none;
   }
   .skills-tabs-track {
-    border-radius: 16px;
-    width: 100%;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    margin: 0 auto;
+    gap: 0.35rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 999px;
   }
   .skills-tab-btn {
-    padding: 0.5rem 0.9rem;
+    padding: 0.48rem 0.95rem;
     font-size: 0.78rem;
+    white-space: nowrap;
   }
+
+  /* Desktop marquee hidden on mobile */
+  .skills-desktop-marquee {
+    display: none !important;
+  }
+
+  /* 2-Column Cyber Grid on mobile */
+  .skills-mobile-deck {
+    display: block !important;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .skills-mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+    width: 100%;
+  }
+  .skill-mobile-card {
+    padding: 1rem 0.85rem;
+    border-radius: 16px;
+    background: linear-gradient(145deg, rgba(18, 10, 8, 0.92) 0%, rgba(10, 4, 3, 0.98) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .skill-mobile-card .skill-card-top {
+    margin-bottom: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .skill-mobile-card .skill-icon-bubble {
+    width: 36px;
+    height: 36px;
+    font-size: 1.15rem;
+    border-radius: 10px;
+  }
+  .skill-mobile-card .skill-level-badge {
+    font-size: 0.56rem;
+    padding: 0.16rem 0.45rem;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+  .skill-mobile-card .skill-title {
+    font-size: 0.92rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+  }
+  .skill-mobile-card .skill-desc {
+    font-size: 0.7rem;
+    line-height: 1.35;
+    color: #94a3b8;
+  }
+
+  /* Bento Grid for category filters on mobile */
+  .skills-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+  .skills-bento-grid .skill-luxury-card {
+    padding: 1rem 0.85rem;
+    border-radius: 16px;
+  }
+  .skills-bento-grid .skill-card-top {
+    margin-bottom: 0.65rem;
+  }
+  .skills-bento-grid .skill-icon-bubble {
+    width: 36px;
+    height: 36px;
+    font-size: 1.15rem;
+    border-radius: 10px;
+  }
+  .skills-bento-grid .skill-level-badge {
+    font-size: 0.56rem;
+    padding: 0.16rem 0.45rem;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .skills-bento-grid .skill-title {
+    font-size: 0.92rem;
+    margin-bottom: 0.2rem;
+  }
+  .skills-bento-grid .skill-desc {
+    font-size: 0.7rem;
+    line-height: 1.35;
+  }
+
+  /* 3D Sphere mode on mobile */
+  .skills-3d-sphere-wrap {
+    min-height: 360px;
+    padding: 1.5rem 0.8rem;
+    border-radius: 20px;
+  }
+  .sphere-interactive-hint {
+    font-size: 0.76rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  /* Highlights bar */
+  .skills-highlights-bar {
+    margin-top: 2.2rem;
+    padding: 1.4rem 1.2rem;
+    border-radius: 20px;
+    gap: 1.1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .highlight-item {
+    gap: 0.85rem;
+  }
+  .highlight-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .highlight-title {
+    font-size: 0.92rem;
+  }
+  .highlight-sub {
+    font-size: 0.76rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .skills-mobile-grid,
   .skills-bento-grid {
     grid-template-columns: 1fr;
   }
@@ -3191,27 +3389,164 @@
 }
 
 /* Responsive Experience */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .experience-framer-section {
+    padding: 5rem 0 6rem;
+  }
   .experience-framer-title {
-    font-size: 2.4rem;
-  }
-  .experience-tabs-track {
-    border-radius: 16px;
-    width: 100%;
-  }
-  .experience-tab-btn {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.8rem;
+    font-size: 2.8rem;
   }
   .exp-card-main {
-    padding: 1.6rem 1.4rem;
+    padding: 1.8rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-framer-section {
+    padding: 3.8rem 0 4.2rem;
+  }
+  .experience-framer-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .experience-framer-header {
+    margin-bottom: 2rem;
+  }
+  .experience-tag-pill {
+    font-size: 0.74rem;
+    padding: 0.32rem 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .experience-framer-title {
+    font-size: clamp(2rem, 7.5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+  }
+  .experience-framer-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    padding: 0 0.5rem;
+    margin-bottom: 1.4rem;
+  }
+  .experience-tabs-track {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 999px;
+    padding: 0.3rem;
+    gap: 0.3rem;
+    justify-content: flex-start;
+  }
+  .experience-tabs-track::-webkit-scrollbar {
+    display: none;
+  }
+  .experience-tab-btn {
+    padding: 0.5rem 0.95rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .exp-tab-count {
+    width: 18px;
+    height: 18px;
+    font-size: 0.68rem;
+  }
+  .experience-cards-stack {
+    gap: 1.1rem;
+  }
+  .exp-luxury-card {
+    border-radius: 18px;
+  }
+  .exp-card-left-bar {
+    width: 4px;
+  }
+  .exp-card-main {
+    padding: 1.25rem 1.1rem;
+    gap: 1rem;
   }
   .exp-card-header-row {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.65rem;
+    width: 100%;
+  }
+  .exp-type-pill {
+    font-size: 0.68rem;
+    padding: 0.22rem 0.6rem;
+    margin-bottom: 0.35rem;
+  }
+  .exp-role-title {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+  }
+  .exp-company-info {
+    font-size: 0.84rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .exp-period-wrap {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.15rem;
+  }
+  .exp-live-pulse {
+    font-size: 0.66rem;
+    padding: 0.22rem 0.6rem;
+  }
+  .exp-period-badge {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.7rem;
+  }
+  .edu-grade-badge {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.7rem;
+  }
+  .exp-points-list {
+    gap: 0.6rem;
+  }
+  .exp-point-item {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    gap: 0.6rem;
+  }
+  .exp-check-icon {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+  .exp-tech-chips {
+    gap: 0.38rem;
+    padding-top: 0.4rem;
+  }
+  .exp-skill-chip {
+    font-size: 0.7rem;
+    padding: 0.18rem 0.55rem;
+    border-radius: 6px;
   }
   .honors-luxury-grid {
     grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .honor-luxury-card {
+    padding: 1.2rem 1.1rem;
+    border-radius: 16px;
+    gap: 0.9rem;
+  }
+  .honor-icon-box {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+  }
+  .honor-title {
+    font-size: 0.96rem;
+  }
+  .honor-issuer {
+    font-size: 0.78rem;
   }
 }
 
@@ -3726,35 +4061,159 @@
 
 /* Responsive Projects */
 @media (max-width: 992px) {
+  .projects-luxury-section {
+    padding: 5rem 0 6rem;
+  }
   .projects-luxury-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .flagship-card .mockup-image-box {
-    height: 320px;
+    height: 300px;
   }
   .projects-luxury-title {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
 }
 
-@media (max-width: 640px) {
-  .project-luxury-card {
-    padding: 1.6rem 1.4rem;
-    border-radius: 22px;
+@media (max-width: 768px) {
+  .projects-luxury-section {
+    padding: 3.8rem 0 4.2rem;
   }
-  .flagship-card .mockup-image-box {
-    height: 220px;
+  .projects-luxury-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .projects-luxury-header {
+    margin-bottom: 2rem;
+  }
+  .projects-tag-pill {
+    font-size: 0.74rem;
+    padding: 0.32rem 0.95rem;
+    margin-bottom: 0.75rem;
   }
   .projects-luxury-title {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 7.5vw, 2.5rem);
+    margin-bottom: 0.5rem;
   }
+  .projects-luxury-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    padding: 0 0.5rem;
+    margin-bottom: 1.4rem;
+  }
+  /* Horizontal swipeable filter capsule */
   .projects-tabs-track {
-    border-radius: 16px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
+    max-width: 100%;
+    border-radius: 999px;
+    padding: 0.3rem;
+    gap: 0.3rem;
+    justify-content: flex-start;
+  }
+  .projects-tabs-track::-webkit-scrollbar {
+    display: none;
   }
   .projects-tab-btn {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .projects-luxury-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+  .project-luxury-card {
+    padding: 1.25rem 1.1rem;
+    border-radius: 20px;
+    gap: 1rem;
+  }
+  .project-preview-mockup {
+    border-radius: 14px;
+  }
+  .mockup-browser-bar {
+    padding: 0.5rem 0.8rem;
+  }
+  .browser-dots {
+    gap: 4px;
+  }
+  .b-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .browser-url-bar {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.6rem;
+  }
+  .mockup-image-box {
+    height: 190px;
+  }
+  .flagship-card .mockup-image-box {
+    height: 210px;
+  }
+  .project-headline {
+    font-size: 1.25rem;
+  }
+  .project-tagline-text {
+    font-size: 0.85rem;
+  }
+  .project-description-text {
+    font-size: 0.86rem;
+    line-height: 1.55;
+  }
+  .project-key-bullets {
+    gap: 0.45rem;
+    margin: 0.2rem 0;
+  }
+  .bullet-chip {
+    font-size: 0.74rem;
+    padding: 0.25rem 0.65rem;
+  }
+  .project-tech-ribbon {
+    gap: 0.38rem;
+    padding-top: 0.4rem;
+  }
+  .proj-tech-chip {
+    font-size: 0.72rem;
+    padding: 0.18rem 0.55rem;
+    border-radius: 6px;
+  }
+  .project-actions-row {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+  }
+  .proj-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.86rem;
+  }
+  .project-live-indicator-pill {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.7rem;
+  }
+  /* Modal on mobile */
+  .modal-backdrop {
+    padding: 1rem 0.75rem;
+  }
+  .modal-dialog {
+    padding: 1.6rem 1.25rem;
+    border-radius: 20px;
+    max-height: 86vh;
+  }
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
   }
 }
 
@@ -4097,36 +4556,160 @@
 
 /* Responsive Achievements */
 @media (max-width: 992px) {
+  .achievements-luxury-section {
+    padding: 5rem 0 6rem;
+  }
   .achievements-luxury-grid {
-    grid-template-columns: 1fr;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.2rem;
   }
   .achievements-telemetry-bar {
     grid-template-columns: repeat(2, 1fr);
+    padding: 1.6rem 1.8rem;
   }
   .achievements-luxury-title {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
 }
 
-@media (max-width: 640px) {
-  .achievements-luxury-card {
-    padding: 1.6rem 1.4rem;
-    border-radius: 22px;
+@media (max-width: 768px) {
+  .achievements-luxury-section {
+    padding: 3.8rem 0 4.2rem;
   }
-  .achievements-telemetry-bar {
-    grid-template-columns: 1fr;
-    padding: 1.4rem;
+  .achievements-luxury-container {
+    width: 100%;
+    padding: 0 0.65rem;
+  }
+  .achievements-luxury-header {
+    margin-bottom: 2rem;
+  }
+  .achievements-tag-pill {
+    font-size: 0.74rem;
+    padding: 0.32rem 0.95rem;
+    margin-bottom: 0.75rem;
   }
   .achievements-luxury-title {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 7.5vw, 2.5rem);
+    margin-bottom: 0.5rem;
   }
+  .achievements-luxury-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    padding: 0 0.5rem;
+    margin-bottom: 1.4rem;
+  }
+  /* Horizontal swipeable category rail */
   .achievements-tabs-track {
-    border-radius: 16px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
+    max-width: 100%;
+    border-radius: 999px;
+    padding: 0.3rem;
+    gap: 0.3rem;
+    justify-content: flex-start;
+  }
+  .achievements-tabs-track::-webkit-scrollbar {
+    display: none;
   }
   .achieve-tab-btn {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  /* 2x2 Telemetry Grid on Mobile */
+  .achievements-telemetry-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.65rem;
+    padding: 1rem 0.85rem;
+    border-radius: 16px;
+    margin-bottom: 1.8rem;
+  }
+  .telemetry-item {
+    gap: 0.55rem;
+  }
+  .telemetry-icon-box {
+    width: 36px;
+    height: 36px;
+    font-size: 1.05rem;
+    border-radius: 10px;
+  }
+  .telemetry-val {
+    font-size: 0.98rem;
+  }
+  .telemetry-label {
+    font-size: 0.68rem;
+  }
+  /* 2-Column Left/Right Cards on Mobile */
+  .achievements-luxury-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.65rem !important;
+    width: 100%;
+  }
+  .achievement-luxury-card {
+    padding: 0.95rem 0.8rem;
+    border-radius: 16px;
+    gap: 0.65rem;
+  }
+  .achievement-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+  }
+  .achievement-icon-bubble {
+    width: 34px;
+    height: 34px;
+    font-size: 1.05rem;
+    border-radius: 9px;
+    flex-shrink: 0;
+  }
+  .achievement-badge-pill {
+    font-size: 0.52rem;
+    padding: 0.15rem 0.4rem;
+    max-width: 78px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+  .achievement-card-body {
+    gap: 0.4rem;
+  }
+  .achievement-card-title {
+    font-size: 0.88rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .achievement-issuer-line {
+    font-size: 0.7rem;
+    gap: 0.3rem;
+  }
+  .achievement-card-desc {
+    font-size: 0.68rem;
+    line-height: 1.35;
+    margin: 0.1rem 0 0.2rem;
+    color: #94a3b8;
+  }
+  .achievement-bullets-list {
+    gap: 0.3rem;
+  }
+  .achievement-bullet-item {
+    font-size: 0.65rem;
+    line-height: 1.25;
+    gap: 0.3rem;
+  }
+  .achievement-bullet-item i {
+    font-size: 0.62rem;
+    margin-top: 0.1rem;
   }
 }
 
@@ -4613,16 +5196,180 @@
   }
 }
 
-@media (max-width: 640px) {
-  .contact-form-luxury-card {
-    padding: 1.8rem 1.4rem;
-    border-radius: 22px;
+@media (max-width: 768px) {
+  .contact-luxury-section {
+    padding: 4rem 0.75rem 4.5rem;
   }
+
+  .contact-luxury-header {
+    margin-bottom: 2rem;
+  }
+
+  .contact-status-badge {
+    font-size: 0.7rem;
+    padding: 0.38rem 0.85rem;
+    gap: 0.5rem;
+    max-width: 100%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.9rem;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .contact-luxury-title {
+    font-size: 1.95rem;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-luxury-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    padding: 0 0.4rem;
+  }
+
+  .contact-luxury-grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .contact-channels-column {
+    gap: 0.8rem;
+  }
+
+  .channel-luxury-card {
+    padding: 0.95rem 1.1rem;
+    border-radius: 16px;
+    gap: 0.85rem;
+  }
+
+  .channel-icon-box {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+
+  .channel-label {
+    font-size: 0.68rem;
+  }
+
+  .channel-value {
+    font-size: 0.88rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .channel-action-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  .channel-location-banner {
+    padding: 0.95rem 1.1rem;
+    border-radius: 16px;
+    gap: 0.85rem;
+  }
+
+  .location-icon-pin {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+
+  .location-title {
+    font-size: 0.7rem;
+  }
+
+  .location-text {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .whatsapp-luxury-cta {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.88rem;
+    border-radius: 999px;
+    margin-top: 0.25rem;
+  }
+
+  /* Right Column Form */
+  .contact-form-luxury-card {
+    padding: 1.5rem 1.15rem;
+    border-radius: 20px;
+  }
+
+  .form-card-header {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-heading {
+    font-size: 1.3rem;
+  }
+
+  .form-subheading {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .contact-luxury-form {
+    gap: 1.1rem;
+  }
+
+  .topic-selector-group {
+    gap: 0.45rem;
+  }
+
+  .topic-pills-row {
+    gap: 0.4rem;
+  }
+
+  .topic-pill {
+    font-size: 0.72rem;
+    padding: 0.38rem 0.7rem;
+    border-radius: 999px;
+  }
+
   .form-double-row {
     grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
-  .contact-luxury-title {
-    font-size: 2.2rem;
+
+  .field-group {
+    gap: 0.35rem;
+  }
+
+  .field-label {
+    font-size: 0.78rem;
+  }
+
+  .luxury-input {
+    font-size: 16px; /* prevent mobile safari zoom */
+    padding: 0.78rem 0.85rem 0.78rem 2.4rem;
+    border-radius: 12px;
+  }
+
+  .field-icon {
+    left: 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  .luxury-textarea {
+    font-size: 16px;
+    padding: 0.78rem 0.85rem;
+    min-height: 95px;
+    border-radius: 12px;
+  }
+
+  .submit-luxury-btn {
+    padding: 0.9rem 1.3rem;
+    font-size: 0.9rem;
+    border-radius: 999px;
   }
 }
 
@@ -6829,89 +7576,14 @@
 
 
 
-  /* Skills dual marquee mobile */
-  .skill-marquee-card {
-    width: 260px;
-    padding: 1.3rem 1.2rem;
-  }
 
-  .skills-highlights-bar {
-    padding: 1.5rem 1.3rem;
-    gap: 1.2rem;
-  }
 
-  /* Experience section mobile */
-  .experience-framer-section {
-    padding: 4.5rem 1rem;
-  }
 
-  .experience-framer-title {
-    font-size: 2.2rem;
-  }
 
-  .exp-card-main {
-    padding: 1.5rem 1.2rem;
-  }
 
-  .exp-role-title {
-    font-size: 1.25rem;
-  }
 
-  /* Projects section mobile */
-  .projects-luxury-section {
-    padding: 4.5rem 1rem;
-  }
 
-  .projects-luxury-title {
-    font-size: 2.2rem;
-  }
 
-  .project-luxury-card {
-    padding: 1.5rem 1.3rem;
-    border-radius: 22px;
-  }
-
-  .flagship-card .mockup-image-box {
-    height: 220px;
-  }
-
-  /* Achievements section mobile */
-  .achievements-luxury-section {
-    padding: 4.5rem 1rem;
-  }
-
-  .achievements-luxury-title {
-    font-size: 2.2rem;
-  }
-
-  .achievement-luxury-card {
-    padding: 1.5rem 1.3rem;
-    border-radius: 22px;
-  }
-
-  .achievements-telemetry-bar {
-    grid-template-columns: 1fr;
-    padding: 1.3rem 1.2rem;
-    gap: 1rem;
-  }
-
-  /* Contact section mobile */
-  .contact-luxury-section {
-    padding: 4.5rem 1rem;
-  }
-
-  .contact-luxury-title {
-    font-size: 2.2rem;
-  }
-
-  .contact-form-luxury-card {
-    padding: 1.8rem 1.3rem;
-    border-radius: 22px;
-  }
-
-  .form-double-row {
-    grid-template-columns: 1fr;
-  }
 }
 
 

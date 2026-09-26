@@ -141,65 +141,107 @@ export default function Skills() {
         <AnimatePresence mode="wait">
           {activeTab === 'all' ? (
             <motion.div
-              key="all-marquee"
-              className="skills-dual-marquee-container"
+              key="all-showcase"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
             >
-              {/* Row 1 - Right to Left Infinite Marquee */}
-              <div className="skills-marquee-row-wrapper">
-                <div className="skills-marquee-row-track track-speed-1">
-                  {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, index) => (
-                    <div
-                      key={`r1-${skill.name}-${index}`}
-                      className="skill-luxury-card skill-marquee-card"
-                      onMouseEnter={() => cyberAudio.playHover()}
-                    >
+              {/* DESKTOP ONLY: Dual-Row Infinite Marquee */}
+              <div className="skills-desktop-marquee skills-dual-marquee-container">
+                {/* Row 1 - Right to Left */}
+                <div className="skills-marquee-row-wrapper">
+                  <div className="skills-marquee-row-track track-speed-1">
+                    {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, index) => (
                       <div
-                        className="skill-card-glow"
-                        style={{ background: `radial-gradient(circle, ${skill.color}35 0%, transparent 70%)` }}
-                      />
-                      <div className="skill-card-top">
+                        key={`r1-${skill.name}-${index}`}
+                        className="skill-luxury-card skill-marquee-card"
+                        onMouseEnter={() => cyberAudio.playHover()}
+                      >
                         <div
-                          className="skill-icon-bubble"
-                          style={{ color: skill.color, borderColor: `${skill.color}45` }}
-                        >
-                          <i className={skill.icon}></i>
+                          className="skill-card-glow"
+                          style={{ background: `radial-gradient(circle, ${skill.color}35 0%, transparent 70%)` }}
+                        />
+                        <div className="skill-card-top">
+                          <div
+                            className="skill-icon-bubble"
+                            style={{ color: skill.color, borderColor: `${skill.color}45` }}
+                          >
+                            <i className={skill.icon}></i>
+                          </div>
+                          <span
+                            className="skill-level-badge"
+                            style={{ color: skill.color, borderColor: `${skill.color}40`, background: `${skill.color}15` }}
+                          >
+                            {skill.level}
+                          </span>
                         </div>
-                        <span
-                          className="skill-level-badge"
-                          style={{ color: skill.color, borderColor: `${skill.color}40`, background: `${skill.color}15` }}
-                        >
-                          {skill.level}
-                        </span>
+                        <div className="skill-card-body">
+                          <h3 className="skill-title">{skill.name}</h3>
+                          <p className="skill-desc">{skill.desc}</p>
+                        </div>
+                        <div
+                          className="skill-card-line"
+                          style={{ background: `linear-gradient(90deg, ${skill.color}, transparent)` }}
+                        />
                       </div>
-                      <div className="skill-card-body">
-                        <h3 className="skill-title">{skill.name}</h3>
-                        <p className="skill-desc">{skill.desc}</p>
-                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Row 2 - Right to Left */}
+                <div className="skills-marquee-row-wrapper">
+                  <div className="skills-marquee-row-track track-speed-2">
+                    {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, index) => (
                       <div
-                        className="skill-card-line"
-                        style={{ background: `linear-gradient(90deg, ${skill.color}, transparent)` }}
-                      />
-                    </div>
-                  ))}
+                        key={`r2-${skill.name}-${index}`}
+                        className="skill-luxury-card skill-marquee-card"
+                        onMouseEnter={() => cyberAudio.playHover()}
+                      >
+                        <div
+                          className="skill-card-glow"
+                          style={{ background: `radial-gradient(circle, ${skill.color}35 0%, transparent 70%)` }}
+                        />
+                        <div className="skill-card-top">
+                          <div
+                            className="skill-icon-bubble"
+                            style={{ color: skill.color, borderColor: `${skill.color}45` }}
+                          >
+                            <i className={skill.icon}></i>
+                          </div>
+                          <span
+                            className="skill-level-badge"
+                            style={{ color: skill.color, borderColor: `${skill.color}40`, background: `${skill.color}15` }}
+                          >
+                            {skill.level}
+                          </span>
+                        </div>
+                        <div className="skill-card-body">
+                          <h3 className="skill-title">{skill.name}</h3>
+                          <p className="skill-desc">{skill.desc}</p>
+                        </div>
+                        <div
+                          className="skill-card-line"
+                          style={{ background: `linear-gradient(90deg, ${skill.color}, transparent)` }}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              {/* Row 2 - Right to Left Infinite Marquee */}
-              <div className="skills-marquee-row-wrapper">
-                <div className="skills-marquee-row-track track-speed-2">
-                  {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, index) => (
+              {/* MOBILE ONLY: High-End 2-Column Cyber Grid */}
+              <div className="skills-mobile-deck">
+                <div className="skills-mobile-grid">
+                  {enhancedSkills.map((skill) => (
                     <div
-                      key={`r2-${skill.name}-${index}`}
-                      className="skill-luxury-card skill-marquee-card"
-                      onMouseEnter={() => cyberAudio.playHover()}
+                      key={`mob-${skill.name}`}
+                      className="skill-luxury-card skill-mobile-card"
+                      onClick={() => cyberAudio.playClick()}
                     >
                       <div
                         className="skill-card-glow"
-                        style={{ background: `radial-gradient(circle, ${skill.color}35 0%, transparent 70%)` }}
+                        style={{ background: `radial-gradient(circle, ${skill.color}40 0%, transparent 70%)` }}
                       />
                       <div className="skill-card-top">
                         <div
