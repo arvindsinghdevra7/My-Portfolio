@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="neon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928ca" />
+      <stop offset="100%" stop-color="#ff0080" />
+    </linearGradient>
+    <linearGradient id="skin-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6d365" />
+      <stop offset="100%" stop-color="#fda085" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#bg-grad)" stroke="#1e293b" stroke-width="4"/>
+  <circle cx="200" cy="200" r="170" fill="none" stroke="url(#neon-cyan)" stroke-width="2" stroke-dasharray="8 6" opacity="0.4"/>
+
+  <!-- Body / Hoodie -->
+  <path d="M 100 370 C 110 290, 150 250, 200 250 C 250 250, 290 290, 300 370 Z" fill="#1e293b" />
+  <path d="M 140 260 L 200 340 L 260 260 Z" fill="url(#neon-purple)" opacity="0.8"/>
+  <path d="M 160 280 L 200 340 L 240 280 Z" fill="#0f172a"/>
+
+  <!-- Neck -->
+  <rect x="175" y="210" width="50" height="50" rx="10" fill="#e2a76f"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="180" rx="60" ry="70" fill="url(#skin-grad)"/>
+
+  <!-- Hair -->
+  <path d="M 135 170 C 135 110, 160 100, 200 100 C 240 100, 265 110, 265 170 C 250 140, 230 130, 200 130 C 170 130, 150 140, 135 170 Z" fill="#1e1b4b"/>
+  <path d="M 130 160 C 130 110, 170 90, 210 90 C 250 90, 270 110, 270 150 C 265 130, 245 115, 215 115 C 185 115, 155 130, 130 160 Z" fill="#0f172a"/>
+
+  <!-- Glasses -->
+  <rect x="150" y="160" width="40" height="28" rx="8" fill="none" stroke="url(#neon-cyan)" stroke-width="3.5"/>
+  <rect x="210" y="160" width="40" height="28" rx="8" fill="none" stroke="url(#neon-cyan)" stroke-width="3.5"/>
+  <line x1="190" y1="172" x2="210" y2="172" stroke="url(#neon-cyan)" stroke-width="3.5"/>
+  <line x1="135" y1="172" x2="150" y2="172" stroke="url(#neon-cyan)" stroke-width="3"/>
+  <line x1="250" y1="172" x2="265" y2="172" stroke="url(#neon-cyan)" stroke-width="3"/>
+
+  <!-- Eyes -->
+  <circle cx="170" cy="174" r="5" fill="#1e293b"/>
+  <circle cx="230" cy="174" r="5" fill="#1e293b"/>
+  <circle cx="172" cy="172" r="1.5" fill="#fff"/>
+  <circle cx="232" cy="172" r="1.5" fill="#fff"/>
+
+  <!-- Smile -->
+  <path d="M 185 215 Q 200 230 215 215" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Code brackets floating -->
+  <text x="50" y="140" fill="#00f2fe" font-family="monospace" font-size="28" font-weight="bold" opacity="0.6">&lt;/&gt;</text>
+  <text x="320" y="240" fill="#ff0080" font-family="monospace" font-size="26" font-weight="bold" opacity="0.6">{ ; }</text>
+</svg>

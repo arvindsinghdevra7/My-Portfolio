@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-food" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917" />
+      <stop offset="100%" stop-color="#292524" />
+    </linearGradient>
+    <linearGradient id="orange-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg-food)"/>
+  <rect x="20" y="20" width="560" height="300" rx="12" fill="#0f172a" stroke="#292524" stroke-width="2"/>
+  
+  <!-- App Header -->
+  <rect x="20" y="20" width="560" height="45" rx="12" fill="#1c1917"/>
+  <circle cx="50" cy="42" r="12" fill="url(#orange-grad)"/>
+  <text x="70" y="47" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="15">FoodExpress MERN</text>
+  <rect x="420" y="32" width="130" height="22" rx="11" fill="url(#green-grad)"/>
+  <text x="435" y="47" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="10">PAYMENT GATEWAY</text>
+
+  <!-- Food Menu Grid -->
+  <rect x="50" y="85" width="150" height="130" rx="10" fill="#1e293b"/>
+  <circle cx="125" cy="130" r="30" fill="url(#orange-grad)" opacity="0.85"/>
+  <text x="80" y="185" fill="#f8fafc" font-family="sans-serif" font-weight="600" font-size="12">Gourmet Burger</text>
+  <text x="110" y="202" fill="#f59e0b" font-family="monospace" font-size="11">$12.99</text>
+
+  <rect x="225" y="85" width="150" height="130" rx="10" fill="#1e293b"/>
+  <circle cx="300" cy="130" r="30" fill="#ef4444" opacity="0.85"/>
+  <text x="260" y="185" fill="#f8fafc" font-family="sans-serif" font-weight="600" font-size="12">Italian Pizza</text>
+  <text x="285" y="202" fill="#f59e0b" font-family="monospace" font-size="11">$16.50</text>
+
+  <rect x="400" y="85" width="150" height="130" rx="10" fill="#1e293b"/>
+  <circle cx="475" cy="130" r="30" fill="#10b981" opacity="0.85"/>
+  <text x="435" y="185" fill="#f8fafc" font-family="sans-serif" font-weight="600" font-size="12">Fresh Bowl</text>
+  <text x="460" y="202" fill="#f59e0b" font-family="monospace" font-size="11">$10.00</text>
+
+  <!-- Order & Tracking Status -->
+  <rect x="50" y="235" width="500" height="65" rx="8" fill="#1c1917" stroke="#334155" stroke-width="1"/>
+  <text x="75" y="260" fill="#cbd5e1" font-family="sans-serif" font-weight="bold" font-size="13">Order #FD-9482 Status: Out for Delivery 🛵</text>
+  <rect x="75" y="275" width="450" height="8" rx="4" fill="#334155"/>
+  <rect x="75" y="275" width="340" height="8" rx="4" fill="url(#orange-grad)"/>
+</svg>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Anand Giri Goswami | Full Stack MERN Developer & Software Engineer</title>
+  <meta name="title" content="Anand Giri Goswami | Full Stack MERN Developer & Software Engineer" />
+  <meta name="description"
+    content="Portfolio of Anand Giri Goswami - Full Stack MERN Developer, Python Enthusiast & B.Tech CSE Graduate from Jaipur, India. Specializing in React.js, Node.js, Express, and MongoDB." />
+  <meta name="keywords"
+    content="Anand Giri Goswami, Anand Goswami, Full Stack Developer, MERN Stack Developer, React Developer, Node.js, Jaipur, Software Engineer, Parth Car Rental" />
+  <meta name="author" content="Anand Giri Goswami" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Anand Giri Goswami | Full Stack MERN Developer" />
+  <meta property="og:description"
+    content="Explore full-stack MERN projects, live applications, skills, and experience of Anand Giri Goswami." />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- Interactive Background Particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-tag">&lt;AG /&gt;</span> Anand Goswami
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i class="fa-regular fa-paper-plane"></i> Hire Me
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       2. HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Left Content -->
+        <!-- Hero Content Column (All Details in One Div) -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span> Available for Full-Time & Freelance Roles
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <br />
+            <span class="gradient-text">Anand Giri Goswami</span>
+          </h1>
+
+          <div class="hero-roles">
+            <span>&gt;</span>
+            <span id="typed-text">Full-Stack MERN Developer</span>
+            <span class="typed-cursor">|</span>
+          </div>
+
+          <p class="hero-desc">
+            Passionate Software Engineer and B.Tech CSE Graduate based in Jaipur, India.
+            Specialized in crafting modern, high-performance web applications using the
+            <strong>MERN Stack (MongoDB, Express, React, Node.js)</strong> and <strong>Python</strong>.
+          </p>
+
+          <!-- Core Tech Stack Tags in Hero Content -->
+          <div class="hero-tech-tags">
+            <span class="tech-tag"><i class="fa-brands fa-react" style="color: #00f2fe;"></i> React.js</span>
+            <span class="tech-tag"><i class="fa-brands fa-node-js" style="color: #22c55e;"></i> Node.js</span>
+            <span class="tech-tag"><i class="fa-solid fa-database" style="color: #10b981;"></i> MongoDB</span>
+            <span class="tech-tag"><i class="fa-brands fa-python" style="color: #f59e0b;"></i> Python</span>
+            <span class="tech-tag"><i class="fa-brands fa-js" style="color: #eab308;"></i> JavaScript</span>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-laptop-code"></i> View My Work
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-envelope"></i> Get In Touch
+            </a>
+            <a href="https://parthcarrental.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Project
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://linkedin.com/in/anand-goswami" target="_blank" rel="noopener noreferrer"
+              class="social-link" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:Goswamianand054@gmail.com" class="social-link" title="Send Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+917725923120" class="social-link" title="Call Me">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Big Separate Profile Photo Stage -->
+        <div class="hero-portrait-stage">
+          <!-- Ambient Glow Backdrop -->
+          <div class="portrait-glow-pulse"></div>
+
+          <div class="portrait-interactive-frame" id="avatar-container">
+            <!-- Cyber Tech HUD Corner Brackets -->
+            <span class="cyber-bracket cyber-bracket-tl"></span>
+            <span class="cyber-bracket cyber-bracket-tr"></span>
+            <span class="cyber-bracket cyber-bracket-bl"></span>
+            <span class="cyber-bracket cyber-bracket-br"></span>
+
+            <!-- Big Glowing Squircle Frame -->
+            <div class="hero-big-avatar-frame">
+              <div class="big-photo-inner">
+                <img id="main-avatar-img" src="assets/images/profile-stylish.jpg" alt="Anand Giri Goswami"
+                  class="big-photo-img" onerror="this.src='assets/images/WhatsApp Image 2026-09-21 at 14.48.51.jpeg'" />
+                <div class="face-photo-sheen"></div>
+              </div>
+            </div>
+
+            <!-- Floating Interactive Badges with 3D Depth -->
+            <div class="floating-badge badge-hero-top">
+              <i class="fa-brands fa-react" style="color: #00f2fe; font-size: 1.3rem;"></i>
+              <div>
+                <div
+                  style="font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px;">
+                  Specialist</div>
+                <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-main);">MERN Architect</div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-hero-bottom">
+              <i class="fa-solid fa-code-branch" style="color: #ff0080; font-size: 1.2rem;"></i>
+              <div>
+                <div
+                  style="font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px;">
+                  Full-Stack</div>
+                <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-main);">5+ Production Apps</div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-hero-location">
+              <span class="status-dot"></span>
+              <span
+                style="font-size: 0.8rem; font-weight: 600; color: var(--accent-cyan); font-family: var(--font-mono);">📍
+                Jaipur, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. ABOUT ME & STATS SECTION
+       ========================================================================= -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fa-regular fa-user"></i> About Me</span>
+        <h2 class="section-title">Driven by <span class="gradient-text">Code & Innovation</span></h2>
+        <p class="section-subtitle">A brief look into my background, engineering foundation, and passion for technology.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- About Portrait Showcase Card -->
+        <div class="glass-card about-portrait-card reveal">
+          <div class="about-portrait-img-wrap">
+            <img src="assets/images/profile-stylish.jpg" alt="Anand Giri Goswami Profile" class="about-portrait-img"
+              onerror="this.src='assets/images/WhatsApp Image 2026-09-21 at 14.48.51.jpeg'" />
+          </div>
+          <div class="about-experience-badge">
+            <span class="status-dot"></span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-main);">B.Tech CSE Graduate</div>
+              <div style="font-size: 0.75rem; color: var(--accent-cyan); font-family: var(--font-mono);">GIT Jaipur
+                (2021 – 2025)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Text & Stats -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="glass-card about-card reveal reveal-delay-1">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main);">
+              Hello! I'm Anand Giri Goswami
+            </h3>
+            <p class="about-highlight">
+              I am a Computer Science & Engineering graduate from <strong>Global Institute of Technology,
+                Jaipur</strong> (2021 – 2025).
+              My journey includes developing full-stack production platforms like <strong>Parth Car Rental</strong>,
+              building robust RESTful APIs, and implementing clean, mobile-first responsive interfaces.
+            </p>
+            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+              I have hands-on experience through internships with <strong>EngineerCore (Effervescent IIT
+                Allahabad)</strong> in Android Application Development and specialized training in <strong>Python for
+                Data Science</strong>. I love solving real-world challenges through elegant, maintainable code.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button class="btn btn-outline btn-sm" onclick="copyText('Goswamianand054@gmail.com', 'Email Address')">
+                <i class="fa-regular fa-copy"></i> Copy Email
+              </button>
+              <button class="btn btn-outline btn-sm" onclick="copyText('+917725923120', 'Phone Number')">
+                <i class="fa-solid fa-phone"></i> Copy Phone
+              </button>
+            </div>
+          </div>
+
+          <div class="quick-stats-grid reveal reveal-delay-2">
+            <div class="glass-card stat-box">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Full-Stack Projects Built</div>
+            </div>
+            <div class="glass-card stat-box">
+              <div class="stat-number">1+</div>
+              <div class="stat-label">Live Production Platforms</div>
+            </div>
+            <div class="glass-card stat-box">
+              <div class="stat-number">4+</div>
+              <div class="stat-label">Professional Certifications</div>
+            </div>
+            <div class="glass-card stat-box">
+              <div class="stat-number">2+</div>
+              <div class="stat-label">Internships & Trainings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. SKILLS & TECH STACK SECTION
+       ========================================================================= -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fa-solid fa-code"></i> Technical Stack</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+        <p class="section-subtitle">Core programming languages, web frameworks, databases, and developer toolsets in my
+          toolkit.</p>
+      </div>
+
+      <div class="skills-container">
+        <!-- Web & MERN Technologies -->
+        <div class="glass-card skill-category-card reveal">
+          <div class="skill-category-header">
+            <i class="fa-solid fa-layer-group category-icon"></i>
+            <div>
+              <h3 class="category-title">Web & MERN Stack</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Full-stack architecture</p>
+            </div>
+          </div>
+          <div class="skills-pill-grid">
+            <div class="skill-pill"><i class="fa-brands fa-react"></i> React.js</div>
+            <div class="skill-pill"><i class="fa-brands fa-node-js"></i> Node.js</div>
+            <div class="skill-pill"><i class="fa-solid fa-server"></i> Express.js</div>
+            <div class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</div>
+            <div class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+            <div class="skill-pill"><i class="fa-solid fa-network-wired"></i> RESTful APIs</div>
+            <div class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</div>
+          </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="glass-card skill-category-card reveal reveal-delay-1">
+          <div class="skill-category-header">
+            <i class="fa-solid fa-terminal category-icon"></i>
+            <div>
+              <h3 class="category-title">Programming Languages</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Logic & problem solving</p>
+            </div>
+          </div>
+          <div class="skills-pill-grid">
+            <div class="skill-pill"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill-pill"><i class="fa-solid fa-code"></i> C++</div>
+            <div class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</div>
+            <div class="skill-pill"><i class="fa-brands fa-php"></i> PHP</div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="glass-card skill-category-card reveal reveal-delay-2">
+          <div class="skill-category-header">
+            <i class="fa-solid fa-database category-icon"></i>
+            <div>
+              <h3 class="category-title">Databases</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">NoSQL & Relational Storage</p>
+            </div>
+          </div>
+          <div class="skills-pill-grid">
+            <div class="skill-pill"><i class="fa-solid fa-leaf"></i> MongoDB</div>
+            <div class="skill-pill"><i class="fa-solid fa-database"></i> MySQL</div>
+            <div class="skill-pill"><i class="fa-solid fa-table"></i> Database Design</div>
+          </div>
+        </div>
+
+        <!-- Developer Tools -->
+        <div class="glass-card skill-category-card reveal reveal-delay-3">
+          <div class="skill-category-header">
+            <i class="fa-solid fa-toolbox category-icon"></i>
+            <div>
+              <h3 class="category-title">Developer Tools</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">IDEs, Version Control & Analysis</p>
+            </div>
+          </div>
+          <div class="skills-pill-grid">
+            <div class="skill-pill"><i class="fa-solid fa-code"></i> VS Code</div>
+            <div class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</div>
+            <div class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</div>
+            <div class="skill-pill"><i class="fa-brands fa-android"></i> Android Studio</div>
+            <div class="skill-pill"><i class="fa-solid fa-book-open"></i> Jupyter Notebook</div>
+            <div class="skill-pill"><i class="fa-solid fa-desktop"></i> Dev C++</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. EXPERIENCE & EDUCATION TIMELINE
+       ========================================================================= -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fa-solid fa-timeline"></i> Journey</span>
+        <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+        <p class="section-subtitle">My academic trajectory and professional hands-on industry experience.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Item 1: B.Tech Degree -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">B.Tech in Computer Science & Engineering</h3>
+              <span class="timeline-period">2021 – 2025</span>
+            </div>
+            <div class="timeline-company">
+              <i class="fa-solid fa-graduation-cap" style="color: var(--accent-cyan);"></i>
+              Global Institute of Technology, Jaipur
+            </div>
+            <ul class="timeline-list">
+              <li>Comprehensive core curriculum in Data Structures, Algorithms, DBMS, Operating Systems, Computer
+                Networks, and Full-Stack Web Development.</li>
+              <li>Engineered full-stack academic and production projects with scalable architecture and collaborative
+                team workflows.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 2: Android Intern -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Android Application Development Intern</h3>
+              <span class="timeline-period">May 2023 – June 2023</span>
+            </div>
+            <div class="timeline-company">
+              <i class="fa-solid fa-briefcase" style="color: var(--accent-purple);"></i>
+              EngineerCore (Effervescent IIT Allahabad) • Remote
+            </div>
+            <ul class="timeline-list">
+              <li>Developed a functional Android support game using Android Studio.</li>
+              <li>Gained rigorous hands-on experience in application development life cycles (SDLC) and debugging.</li>
+              <li>Mentored by industry engineers on real-world software architecture and project practices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3: Python Data Science Trainee -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Python for Data Science Trainee</h3>
+              <span class="timeline-period">July 2022 – August 2022</span>
+            </div>
+            <div class="timeline-company">
+              <i class="fa-brands fa-python" style="color: #f59e0b;"></i>
+              Global Institute of Technology, Jaipur
+            </div>
+            <ul class="timeline-list">
+              <li>Mastered Python programming fundamentals, data structures, and algorithmic logic building.</li>
+              <li>Explored data manipulation, statistical routines, and foundational data science concepts using Jupyter
+                Notebooks.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 4: 12th Standard -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Higher Secondary Certificate (12th Standard)</h3>
+              <span class="timeline-period">2021</span>
+            </div>
+            <div class="timeline-company">
+              <i class="fa-solid fa-school" style="color: var(--accent-emerald);"></i>
+              Ascent International Senior Secondary School, Udaipur
+            </div>
+            <ul class="timeline-list">
+              <li>Completed secondary schooling with rigorous focus on Science & Mathematics.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. FEATURED PROJECTS SECTION
+       ========================================================================= -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fa-solid fa-rocket"></i> Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Real-world full-stack web applications, live platforms, and database systems I have
+          engineered.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+        <button class="filter-btn" data-filter="mern">MERN Stack (4)</button>
+        <button class="filter-btn" data-filter="live">Live in Production (1)</button>
+        <button class="filter-btn" data-filter="php">PHP & MySQL (1)</button>
+      </div>
+
+      <!-- Projects Grid (Injected by js/projects.js) -->
+      <div class="projects-grid" id="projects-container">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. CERTIFICATIONS SHOWCASE
+       ========================================================================= -->
+  <section class="certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fa-solid fa-certificate"></i> Credentials</span>
+        <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
+        <p class="section-subtitle">Verified programs and credentials validating my technical proficiencies.</p>
+      </div>
+
+      <div class="certifications-grid">
+        <!-- Cert 1 -->
+        <div class="glass-card cert-card reveal">
+          <div class="cert-icon-wrapper">
+            <i class="fa-brands fa-android"></i>
+          </div>
+          <h3 class="cert-title">Android Application Development</h3>
+          <div class="cert-issuer">
+            <i class="fa-solid fa-building-columns"></i> EngineerCore
+          </div>
+          <div class="cert-date">May 2023 – June 2023</div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="glass-card cert-card reveal reveal-delay-1">
+          <div class="cert-icon-wrapper">
+            <i class="fa-brands fa-python"></i>
+          </div>
+          <h3 class="cert-title">Python for Data Science</h3>
+          <div class="cert-issuer">
+            <i class="fa-solid fa-university"></i> Global Institute of Technology
+          </div>
+          <div class="cert-date">July 2022 – Aug 2022</div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="glass-card cert-card reveal reveal-delay-2">
+          <div class="cert-icon-wrapper">
+            <i class="fa-solid fa-gears"></i>
+          </div>
+          <h3 class="cert-title">Software Engineering Job Simulation</h3>
+          <div class="cert-issuer">
+            <i class="fa-solid fa-award"></i> Industry Simulated Program
+          </div>
+          <div class="cert-date">Dec 2022 – Jan 2023</div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="glass-card cert-card reveal reveal-delay-3">
+          <div class="cert-icon-wrapper">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h3 class="cert-title">Data Analyst Certification</h3>
+          <div class="cert-issuer">
+            <i class="fa-solid fa-graduation-cap"></i> Edureka
+          </div>
+          <div class="cert-date">Sept 2025 – Present</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. CONTACT SECTION
+       ========================================================================= -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fa-regular fa-paper-plane"></i> Get in Touch</span>
+        <h2 class="section-title">Let's Build Something <span class="gradient-text">Extraordinary</span></h2>
+        <p class="section-subtitle">Have an opportunity, project in mind, or just want to connect? Reach out anytime!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-cards reveal">
+          <div class="glass-card info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <h4>Email Me</h4>
+              <p><a href="mailto:Goswamianand054@gmail.com">Goswamianand054@gmail.com</a></p>
+            </div>
+            <button class="copy-btn" onclick="copyText('Goswamianand054@gmail.com', 'Email')" title="Copy Email">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+
+          <div class="glass-card info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="info-text">
+              <h4>Phone / Call</h4>
+              <p><a href="tel:+917725923120">+91 7725923120</a></p>
+            </div>
+            <button class="copy-btn" onclick="copyText('+917725923120', 'Phone')" title="Copy Phone">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+
+          <div class="glass-card info-card">
+            <div class="info-icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="info-text">
+              <h4>LinkedIn</h4>
+              <p><a href="https://linkedin.com/in/anand-goswami" target="_blank"
+                  rel="noopener">linkedin.com/in/anand-goswami</a></p>
+            </div>
+            <a href="https://linkedin.com/in/anand-goswami" target="_blank" rel="noopener" class="copy-btn"
+              title="Open LinkedIn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="glass-card info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="info-text">
+              <h4>Location</h4>
+              <p>Jaipur, Rajasthan, India</p>
+            </div>
+          </div>
+
+          <!-- Quick WhatsApp Link -->
+          <a href="https://wa.me/917725923120?text=Hi%20Anand,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect!"
+            target="_blank" rel="noopener" class="btn btn-secondary"
+            style="margin-top: 0.5rem; justify-content: center;">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.2rem;"></i> Chat Directly on WhatsApp
+          </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card contact-form-card reveal reveal-delay-1">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="user_name" class="form-label">Your Full Name *</label>
+              <input type="text" id="user_name" class="form-control" placeholder="e.g. Rahul Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label for="user_email" class="form-label">Email Address *</label>
+              <input type="email" id="user_email" class="form-control" placeholder="e.g. rahul@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="user_subject" class="form-label">Subject</label>
+              <input type="text" id="user_subject" class="form-control"
+                placeholder="Project discussion / Job opportunity" />
+            </div>
+
+            <div class="form-group">
+              <label for="user_message" class="form-label">Message *</label>
+              <textarea id="user_message" class="form-control" placeholder="Write your message or inquiry here..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="logo">
+        <span class="logo-tag">&lt;AG /&gt;</span> Anand Giri Goswami
+      </div>
+      <p style="font-size: 0.9rem; color: var(--text-muted);">
+        Designed & Engineered with ❤️ using MERN Stack Standards & Modern Vanilla Web Tech.
+      </p>
+      <p style="font-size: 0.8rem; color: var(--text-dim);">
+        © 2026 Anand Giri Goswami. All rights reserved. • Jaipur, India
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       10. PROJECT DETAILS MODAL POPUP
+       ========================================================================= -->
+  <div class="modal-backdrop" id="project-modal" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-body" id="modal-content">
+        <!-- Injected dynamically by js/projects.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
