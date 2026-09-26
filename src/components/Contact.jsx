@@ -11,6 +11,8 @@ export default function Contact({ onCopyText, onShowToast }) {
     subject: 'Full-Stack Next.js Project',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const subjectPills = [
     'Full-Stack Next.js Project',
@@ -29,7 +31,7 @@ export default function Contact({ onCopyText, onShowToast }) {
     setFormData((prev) => ({ ...prev, subject: topic }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, subject, message } = formData;
 
@@ -39,25 +41,77 @@ export default function Contact({ onCopyText, onShowToast }) {
       return;
     }
 
+    setIsSubmitting(true);
+    cyberAudio.playClick();
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || personalInfo.web3FormsAccessKey;
+
+    if (accessKey && accessKey.trim() !== '') {
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: accessKey.trim(),
+            name: name.trim(),
+            email: email.trim(),
+            subject: subject || `Portfolio Inquiry from ${name.trim()}`,
+            message: message.trim(),
+            from_name: `${name.trim()} (Portfolio Contact)`
+          })
+        });
+
+        const data = await response.json();
+        console.log('Web3Forms submission response:', data);
+
+        if (data.success) {
+          cyberAudio.playSuccess();
+          setSubmitSuccess(true);
+          try {
+            confetti({
+              particleCount: 140,
+              spread: 100,
+              origin: { y: 0.65 },
+              colors: ['#ff8a4c', '#f97316', '#c084fc', '#38bdf8', '#22c55e']
+            });
+          } catch {}
+          onShowToast('Message transmitted successfully directly to Arvind!', 'fa-circle-check');
+          setFormData({ name: '', email: '', subject: 'Full-Stack Next.js Project', message: '' });
+          setTimeout(() => setSubmitSuccess(false), 9000);
+          setIsSubmitting(false);
+          return;
+        } else {
+          console.error('Web3Forms returned unsuccessful status:', data);
+          throw new Error(data.message || 'Submission failed');
+        }
+      } catch (err) {
+        console.error('Web3Forms submission error:', err);
+        // Fallback to mailto on error
+      }
+    }
+
+    // Fallback if accessKey is empty or network error occurred
     cyberAudio.playSuccess();
     try {
       confetti({
-        particleCount: 120,
-        spread: 90,
+        particleCount: 100,
+        spread: 80,
         origin: { y: 0.7 },
         colors: ['#ff8a4c', '#f97316', '#c084fc', '#38bdf8', '#22c55e']
       });
-    } catch {
-      // Ignore if unsupported
-    }
+    } catch {}
 
     const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
       subject || `Portfolio Inquiry from ${name}`
     )}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nTopic: ${subject}\n\nMessage:\n${message}`)}`;
 
     window.location.href = mailtoLink;
-    onShowToast('Opening email client to send your message...', 'fa-paper-plane');
+    onShowToast('Redirecting to mail client to transmit message...', 'fa-paper-plane');
     setFormData({ name: '', email: '', subject: 'Full-Stack Next.js Project', message: '' });
+    setIsSubmitting(false);
   };
 
   return (
@@ -227,6 +281,23 @@ export default function Contact({ onCopyText, onShowToast }) {
               <span className="form-subheading">I typically respond within a few hours.</span>
             </div>
 
+            {submitSuccess && (
+              <motion.div
+                className="form-success-banner"
+                initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.35 }}
+              >
+                <div className="success-icon-wrap">
+                  <i className="fa-solid fa-circle-check"></i>
+                </div>
+                <div className="success-banner-content">
+                  <span className="success-banner-title">Message Delivered Successfully!</span>
+                  <p className="success-banner-desc">Thank you for getting in touch. Arvind will respond to your email shortly.</p>
+                </div>
+              </motion.div>
+            )}
+
             <form onSubmit={handleSubmit} className="contact-luxury-form">
 
               {/* Topic Pills Selection */}
@@ -313,13 +384,23 @@ export default function Contact({ onCopyText, onShowToast }) {
               {/* Submit CTA */}
               <motion.button
                 type="submit"
-                className="submit-luxury-btn"
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                onMouseEnter={() => cyberAudio.playHover()}
+                className={`submit-luxury-btn ${isSubmitting ? 'submitting' : ''}`}
+                disabled={isSubmitting}
+                whileHover={!isSubmitting ? { scale: 1.02, y: -2 } : {}}
+                whileTap={!isSubmitting ? { scale: 0.98 } : {}}
+                onMouseEnter={() => !isSubmitting && cyberAudio.playHover()}
               >
-                <i className="fa-solid fa-paper-plane"></i>
-                <span>Send Message Directly</span>
+                {isSubmitting ? (
+                  <>
+                    <i className="fa-solid fa-spinner fa-spin"></i>
+                    <span>Transmitting Message...</span>
+                  </>
+                ) : (
+                  <>
+                    <i className="fa-solid fa-paper-plane"></i>
+                    <span>Send Message Directly</span>
+                  </>
+                )}
               </motion.button>
             </form>
           </motion.div>

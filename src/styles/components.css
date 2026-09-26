@@ -5159,9 +5159,66 @@
   margin-top: 0.5rem;
 }
 
-.submit-luxury-btn:hover {
+.submit-luxury-btn:hover:not(:disabled) {
   background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
   box-shadow: 0 10px 40px rgba(249, 115, 22, 0.65);
+}
+
+.submit-luxury-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  filter: grayscale(0.2);
+}
+
+/* ── Form Success Banner ── */
+.form-success-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  border-radius: 16px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.15);
+}
+
+.success-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22c55e;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.success-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.success-banner-title {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #4ade80;
+  letter-spacing: -0.01em;
+}
+
+.success-banner-desc {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.45;
 }
 
 /* --------------------------------------------------------------------------

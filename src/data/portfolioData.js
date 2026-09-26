@@ -8,6 +8,7 @@ export const personalInfo = {
   github: 'https://github.com',
   linkedin: 'https://www.linkedin.com/in/arvind-singh-devra-673652249/',
   whatsapp: 'https://wa.me/918619221676?text=Hi%20Arvind,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect!',
+  web3FormsAccessKey: '', // Stored securely in .env (VITE_WEB3FORMS_KEY)
   summary:
     'Full Stack Developer with hands-on experience building production-ready web applications using Next.js, Node.js, and MongoDB. Skilled in developing custom admin dashboards, RESTful APIs, JWT authentication, and technical SEO, with a focus on writing clean, maintainable code.'
 };
