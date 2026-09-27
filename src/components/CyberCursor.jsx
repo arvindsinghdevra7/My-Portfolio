@@ -15,9 +15,16 @@ export default function CyberCursor() {
   const cursorY = useSpring(mouseY, springConfig);
 
   useEffect(() => {
-    // Only enable custom cursor on non-touch devices
-    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-    if (isTouchDevice) return;
+    // Only enable custom cursor on desktop non-touch screens
+    const isMobile = window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 768;
+    if (isMobile) return;
+
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
 
     const handleMouseMove = (e) => {
       mouseX.set(e.clientX);
@@ -58,6 +65,7 @@ export default function CyberCursor() {
     document.addEventListener('mouseenter', handleMouseEnter);
 
     return () => {
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mousemove', handleElementHover);
       window.removeEventListener('mousedown', handleMouseDown);

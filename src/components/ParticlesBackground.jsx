@@ -43,11 +43,11 @@ export default function ParticlesBackground() {
     window.addEventListener('resize', handleResize);
 
     const colorPalette = [
-      'rgba(0, 245, 255,',   // Cyan
-      'rgba(139, 92, 246,',  // Violet
-      'rgba(56, 189, 248,',  // Sky Blue
-      'rgba(245, 158, 11,',  // Gold
-      'rgba(16, 185, 129,'   // Emerald
+      'rgba(249, 115, 22,',   // Sunset Orange
+      'rgba(251, 146, 60,',   // Amber
+      'rgba(234, 88, 12,',    // Deep Amber
+      'rgba(245, 158, 11,',   // Gold
+      'rgba(217, 119, 6,'     // Warm Bronze
     ];
 
     class Particle {
@@ -111,7 +111,7 @@ export default function ParticlesBackground() {
 
           if (distance < 125) {
             const opacity = 1 - distance / 125;
-            ctx.strokeStyle = `rgba(0, 245, 255, ${opacity * 0.16})`;
+            ctx.strokeStyle = `rgba(249, 115, 22, ${opacity * 0.12})`;
             ctx.lineWidth = 0.9;
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
