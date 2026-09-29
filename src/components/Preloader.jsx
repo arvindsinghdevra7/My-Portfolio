@@ -75,22 +75,6 @@ export default function Preloader({ onComplete }) {
         ))}
       </div>
 
-      {/* ── Signature Riwa horizontal grid rules ── */}
-      <div className="riwa-preloader-rule top" />
-      <div className="riwa-preloader-rule bottom" />
-
-      {/* ── Top Bar ── */}
-      <div className="riwa-preloader-top">
-        <div className="riwa-preloader-brand">
-          <span className="brand-name">{personalInfo.name}</span>
-          <span className="brand-mark">®</span>
-        </div>
-        <div className="riwa-preloader-location">
-          <span className="live-dot" />
-          <span>RAJASTHAN, INDIA</span>
-        </div>
-      </div>
-
       {/* ── Center Content ── */}
       <div className="riwa-preloader-center">
         {/* Editorial Subtitle */}
@@ -154,12 +138,6 @@ export default function Preloader({ onComplete }) {
             <span className="counter-text">{progress.toString().padStart(2, '0')}%</span>
           </div>
         </div>
-      </div>
-
-      {/* ── Bottom Bar ── */}
-      <div className="riwa-preloader-bottom">
-        <span>© 2025 ARVIND SINGH DEVRA</span>
-        <span className="bottom-edition">PORTFOLIO EDITION • CRAFTED WITH PASSION</span>
       </div>
     </motion.div>
   );

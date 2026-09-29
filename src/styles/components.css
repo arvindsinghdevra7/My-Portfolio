@@ -7849,7 +7849,7 @@
 }
 
 /* ==========================================================================
-   PRELOADER - LUXURY EDITORIAL / WARM SUNSET THEME (MATCHES CURRENT HERO UI)
+   PRELOADER - CLEAN LUXURY EDITORIAL THEME (CENTERED BRAND FOCUS)
    ========================================================================== */
 
 .riwa-preloader-overlay {
@@ -7861,9 +7861,9 @@
   background: #080403;
   z-index: 99999999;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2.2rem 3.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
   overflow: hidden;
   font-family: var(--font-main);
   user-select: none;
@@ -7882,24 +7882,24 @@
   width: 520px;
   height: 520px;
   background: radial-gradient(circle, rgba(249, 115, 22, 0.24) 0%, rgba(225, 29, 72, 0.12) 50%, transparent 75%);
-  top: -5%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   animation: riwaOrbPulse 4s ease-in-out infinite alternate;
 }
 
 .riwa-preloader-orb.cool {
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.16) 0%, transparent 70%);
-  bottom: -5%;
-  right: 5%;
-  opacity: 0.4;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.14) 0%, transparent 70%);
+  bottom: 5%;
+  right: 10%;
+  opacity: 0.35;
 }
 
 @keyframes riwaOrbPulse {
-  0%   { transform: translateX(-50%) scale(0.92); opacity: 0.3; }
-  100% { transform: translateX(-50%) scale(1.1);  opacity: 0.55; }
+  0%   { transform: translate(-50%, -50%) scale(0.92); opacity: 0.3; }
+  100% { transform: translate(-50%, -50%) scale(1.1);  opacity: 0.55; }
 }
 
 /* Twinkling star particles */
@@ -7907,65 +7907,6 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-}
-
-/* Horizontal editorial rules */
-.riwa-preloader-rule {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.08);
-  pointer-events: none;
-}
-.riwa-preloader-rule.top    { top: 80px; }
-.riwa-preloader-rule.bottom { bottom: 80px; }
-
-/* Top Bar */
-.riwa-preloader-top {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.riwa-preloader-brand {
-  display: flex;
-  align-items: baseline;
-  gap: 3px;
-  font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.riwa-preloader-brand .brand-mark {
-  color: #f97316;
-  font-size: 0.9em;
-  font-weight: 700;
-}
-
-.riwa-preloader-location {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.6);
-  text-transform: uppercase;
-}
-
-.riwa-preloader-location .live-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 8px #10b981;
-  animation: status-pulse 2s infinite;
 }
 
 /* Centerpiece */
@@ -7976,15 +7917,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: auto 0;
-  max-width: 900px;
+  max-width: 800px;
   width: 100%;
-  align-self: center;
 }
 
 .riwa-preloader-tagline {
   font-family: var(--font-mono);
-  font-size: clamp(0.72rem, 1.4vw, 0.82rem);
+  font-size: clamp(0.72rem, 1.4vw, 0.85rem);
   font-weight: 700;
   letter-spacing: 0.25em;
   color: rgba(255, 160, 60, 0.9);
@@ -8085,42 +8024,10 @@
   font-size: 0.88rem;
 }
 
-/* Bottom Bar */
-.riwa-preloader-bottom {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.4);
-  text-transform: uppercase;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .riwa-preloader-overlay {
     padding: 1.5rem 1.25rem;
-  }
-
-  .riwa-preloader-rule.top    { top: 65px; }
-  .riwa-preloader-rule.bottom { bottom: 65px; }
-
-  .riwa-preloader-brand {
-    font-size: 0.95rem;
-  }
-
-  .riwa-preloader-location {
-    font-size: 0.65rem;
-  }
-
-  .riwa-preloader-bottom {
-    font-size: 0.62rem;
-    flex-direction: column;
-    gap: 0.35rem;
-    text-align: center;
   }
 
   .riwa-preloader-progress-wrap {
@@ -8159,6 +8066,7 @@
     font-size: 0.8rem;
   }
 }
+
 
 
 
