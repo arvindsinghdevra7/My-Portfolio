@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import Preloader from './components/Preloader';
 import ParticlesBackground from './components/ParticlesBackground';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import CyberCursor from './components/CyberCursor';
@@ -16,9 +18,22 @@ import ScrollToTop from './components/ScrollToTop';
 import Toast from './components/Toast';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedProject, setSelectedProject] = useState(null);
   const [toasts, setToasts] = useState([]);
+
+  // Lock body scroll during preloader
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isLoading]);
 
   // Toast notification helper
   const showToast = (message, icon = 'fa-circle-check') => {
@@ -71,6 +86,13 @@ export default function App() {
 
   return (
     <>
+      {/* Luxury Brand Preloader with Framer Motion */}
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <Preloader onComplete={() => setIsLoading(false)} />
+        )}
+      </AnimatePresence>
+
       {/* Dynamic Cyber Cursor Halo & Dot */}
       <CyberCursor />
 
