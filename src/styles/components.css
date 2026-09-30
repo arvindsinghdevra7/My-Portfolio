@@ -18,6 +18,8 @@
   overflow: hidden;
 }
 
+
+
 .glass-card::before {
   content: '';
   position: absolute;
